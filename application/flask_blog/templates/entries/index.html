@@ -1,8 +1,7 @@
-# flask_blog/templates/entries/index.html
-
-<!doctype html>
-<title>Flask Blog</title>
-
-<a class="navbar-brand" href="/">Flask Blog</a>
-<br>
+<!--最初の壁紙-->
+{% extends "layout.html" %}
+{% block body %}
 投稿がありません
+{% endblock %}
+
+<!--extendは焼き回しを行うやつlayoutから引っ張ってくる-->
