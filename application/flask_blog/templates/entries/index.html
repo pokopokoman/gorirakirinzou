@@ -1,7 +1,17 @@
 <!--最初の壁紙-->
 {% extends "layout.html" %}
 {% block body %}
-投稿がありません
-{% endblock %}
+<ul class="list-group list-group-flush">
 
-<!--extendは焼き回しを行うやつlayoutから引っ張ってくる-->
+{% for entry in entries %}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ entry.title }}</h5>
+        </div>
+    </div>
+{% else %}
+    投稿がありません
+{% endfor %}
+</ul>
+
+{% endblock %}
